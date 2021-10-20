@@ -4,9 +4,9 @@
 int main()
 {
     image_u8_t *im = image_u8_create_from_pnm("/home/dh/Programming/C/aprilfools/test.png");
-    void * null = NULL;
     if (im == NULL) {
-        printf("Can't load img!");
+        printf("Can not load img!\n");
+        return 1;
     }
     apriltag_detector_t *td = apriltag_detector_create();
     apriltag_family_t *tf = tagStandard41h12_create();
