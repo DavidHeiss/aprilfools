@@ -3,7 +3,7 @@
 
 int main()
 {
-    image_u8_t *im = image_u8_create_from_pnm("/home/dh/Programming/C/aprilfools/test.png");
+    image_u8_t *im = image_u8_create_from_pnm("../test.pnm");
     if (im == NULL) {
         printf("Can not load img!\n");
         return 1;
@@ -19,6 +19,7 @@ int main()
         zarray_get(detections, i, &det);
 
         // Do stuff with detections here.
+        printf("%fx %fy\n", det->c[0], det->c[1]);
     }
     // Cleanup.
     tagStandard41h12_destroy(tf);

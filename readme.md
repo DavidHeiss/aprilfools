@@ -5,3 +5,8 @@ cd apriltag
 cmake .
 sudo make install
 ```
+
+# convert
+```
+png2pnm test.png > test.pnm
+```
